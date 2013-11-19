@@ -32,10 +32,8 @@
 	     (ch ch))
     (cond ((eof-object? ch)
 	   ch)
-	   ;(push! (cons 'P (reverse rv)) *result*))
 	  ((char=? ch #\newline)
 	   (begin
-	     ;(read-char)
 	     (if (not (null? rv))
 		 (push! (cons 'P (reverse rv))  *result*))
 	     (paragraph (read-char))))
@@ -76,7 +74,6 @@
 	   (loop (string-append str (string ch)) (read-char))))))
 
 (define (test-the-parser file)
-  ;; File -> IO!
   (call-with-input-file file
     (lambda (input-port)
       (set-current-input-port! input-port)
