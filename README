@@ -1,0 +1,11 @@
+# Simple Markup Parser
+
+This parser works on a tiny subset of Markdown, defined strictly for its utility in fiction and long-form nonfiction writing.  My assumption is that the file will have a single heading, denoted by a line starting with `#' at the top of the file (like this one), followed by paragraphs of text.
+
+The paragraphs are defined by the single empty line that separates them.
+
+Finally, we have support for quotation marks, as used in dialogue between characters, e.g., "He opened the window and saw a girl in the market across the street."
+
+See the file README.out for the output from parsing this file.
+
+The markup from the parser is as follows: 'H' is for headers, 'S' is for sentence (regular) formatting, and 'Q' is for quotations.  In printed fiction, sometimes quotations are formatted differently.
