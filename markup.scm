@@ -9,11 +9,12 @@
             seq))))
 
 (define (chapter)
-  (let loop ((rv '())
-	     (ch (read-char)))
+  (let ((ch (read-char)))
     (if (eof-object? ch)
-	(push! (cons 'C (reverse rv)) *result*)
-	(header ch))))
+	(error "CHAPTER: read <EOF>")
+	(begin
+	  (push! 'C *result*)
+	  (header ch)))))
 
 (define (header ch)
   (if (not (char=? ch #\#))
