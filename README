@@ -10,4 +10,6 @@ The parser makes the following assumptions: (1) that each major unit of text wil
 
 The tags it emits are as follows: 'C' marks a chapter, 'H' a header, 'P' a whole paragraph, 'S' a sentence or sentence fragment (meaning no special formatting is needed), and 'Q' a quotation (so that you can apply formatting if you wish).  In printed fiction, sometimes quotations are formatted differently, for example.
 
-Finally, note that it's written using scsh (The Scheme Shell), but the only non-R5RS bits are in the TEST-THE-PARSER procedure at the end.
+It's written using scsh (The Scheme Shell), but the only non-R5RS bits are in the TEST-THE-PARSER procedure at the end.
+
+Final note: This code was written by Richard M. Loveland and is placed in the Public Domain.  All warranties are disclaimed.

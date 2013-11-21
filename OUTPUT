@@ -11,4 +11,7 @@
       (S "  Paragraphs are separated by empty lines."))
    (P (S "The tags it emits are as follows: 'C' marks a chapter, 'H' a header, 'P' a whole paragraph, 'S' a sentence or sentence fragment (meaning no special formatting is needed), and 'Q' a quotation (so that you can apply formatting if you wish).")
       (S "  In printed fiction, sometimes quotations are formatted differently, for example."))
-   (P (S "Finally, note that it's written using scsh (The Scheme Shell), but the only non-R5RS bits are in the TEST-THE-PARSER procedure at the end.")))
+   (P (S "It's written using scsh (The Scheme Shell), but the only non-R5RS bits are in the TEST-THE-PARSER procedure at the end."))
+   (P (S "Final note: This code was written by Richard M.")
+      (S " Loveland and is placed in the Public Domain.")
+      (S "  All warranties are disclaimed.")))
