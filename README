@@ -2,14 +2,12 @@
 
 Lilt: "To sing in a light manner."
 
-This is the simplest markup parser I could come up with for my own use.  It's about 75 lines of dirt-simple Scheme, and could be made smaller.  It works on a tiny subset of Markdown defined strictly for its utility in long-form fiction writing: a plain text file with exactly one header and paragraphs separated by blank lines.  It emits s-expressions that can be easily converted into various output formats such as HTML.  See the enclosed file OUTPUT for the output from parsing this file.
+This is the simplest markup parser that could possibly work (for me).  It's about 75 lines of Scheme, and could be made smaller.  It works on a tiny subset of Markdown: a plain text file with exactly one header and paragraphs separated by blank lines.  It emits s-expressions that can be converted into output formats such as HTML.  See the enclosed file OUTPUT for the output from parsing this file.
 
-It doesn't do images, bold or italic text, tables, bulleted lists, or even hyperlinks.  It really is just for old-school fiction writing with no distractions.
+It doesn't do images, bold or italic text, tables, bulleted lists, or even hyperlinks.  It really is very simple.
 
-The parser makes the following assumptions: (1) that each major unit of text will have a single title or chapter heading, denoted by a line starting with `#', (2) followed by a blank line, (3) followed by paragraphs of text.  Paragraphs are separated by empty lines.
+The parser makes the following assumptions: first, that each file will have a single title or heading, denoted by a line starting with '#'; second, that the heading will be followed by a blank line, followed by paragraphs of text.  Finally, paragraphs are separated by empty lines, and sentences are split by periods.
 
-The tags it emits are as follows: 'C' marks a chapter, 'H' a header, 'P' a whole paragraph, 'S' a sentence or sentence fragment (meaning no special formatting is needed), and 'Q' a quotation (so that you can apply formatting if you wish).  In printed fiction, sometimes quotations are formatted differently, for example.
+The tags it emits are as follows: 'C' marks a chapter, 'H' a header, 'P' a whole paragraph, 'S' a sentence, and 'Q' a quotation (so that you can apply formatting such as italics if you wish).
 
-It's written using scsh (The Scheme Shell), but the only non-R5RS bits are in the TEST-THE-PARSER procedure at the end.
-
-Final note: This code was written by Richard M. Loveland and is placed in the Public Domain.  All warranties are disclaimed.
+Final note: This code was written by Richard Loveland and is placed in the Public Domain.  All warranties are disclaimed.
