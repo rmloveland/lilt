@@ -75,9 +75,8 @@
 	   (loop (string-append str (string ch)) (read-char))))))
 
 (define (test-the-parser file)
-  (call-with-input-file file
-    (lambda (input-port)
-      (set-current-input-port! input-port)
+  (with-input-from-file file
+    (lambda ()
       (chapter)
       (p (reverse *result*))
       (set! *result* '()))))
